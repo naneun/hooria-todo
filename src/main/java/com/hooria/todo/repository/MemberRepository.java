@@ -17,7 +17,6 @@ public class MemberRepository {
     private final NamedParameterJdbcTemplate jdbc;
     private final RowMapper<Member> rowMapper;
 
-    // TODO
     public MemberRepository(DataSource dataSource) {
         jdbc = new NamedParameterJdbcTemplate(dataSource);
         insertJdbc = new SimpleJdbcInsert(dataSource).withTableName("article").usingGeneratedKeyColumns("id");
