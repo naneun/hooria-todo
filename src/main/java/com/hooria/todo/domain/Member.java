@@ -2,7 +2,7 @@ package com.hooria.todo.domain;
 
 import lombok.*;
 
-@Data
+@Getter
 @AllArgsConstructor
 public class Member {
 
