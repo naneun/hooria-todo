@@ -11,7 +11,6 @@ import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
@@ -36,7 +35,7 @@ public class ActivityLogRepository {
                         rs.getInt("activity_type"),
                         rs.getInt("from_status"),
                         rs.getInt("to_status"),
-                        rs.getObject("created_date", LocalDateTime.class),
+                        rs.getObject("created_at", LocalDateTime.class),
                         rs.getBoolean("read_yn")
                 );
     }
@@ -49,7 +48,7 @@ public class ActivityLogRepository {
 
     public List<ActivityLog> findAll() {
         return jdbc.query(
-                "select id, user_id, activity_type, from_status, to_status, created_date, read_yn from activity_log",
+                "select id, user_id, activity_type, from_status, to_status, created_at, read_yn from activity_log",
                 Collections.emptyMap(), rowMapper
         );
     }

@@ -10,8 +10,8 @@ public class Card {
     private String content;
     private String userId;
     private int applianceInfo;
-    private LocalDateTime createdDate;
-    private LocalDateTime updatedDate;
+    private LocalDateTime createdAt;
+    private LocalDateTime updateAt;
     private boolean deletedYn;
     private int index;
 }
