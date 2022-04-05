@@ -59,6 +59,8 @@ class ActivityLogRepositoryTest {
         List<ActivityLog> results = repository.findAll();
 
         // then
+        assertThat(results.size()).isEqualTo(members.size());
+
         int idx = 0;
         for (ActivityLog result : results) {
             AssertionsForClassTypes.assertThat(result.getId()).isEqualTo(members.get(idx).getId());

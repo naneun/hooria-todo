@@ -1,7 +1,6 @@
 package com.hooria.todo.repository;
 
 import com.hooria.todo.domain.ActivityLog;
-import com.hooria.todo.domain.Member;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
